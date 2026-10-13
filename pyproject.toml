@@ -1,0 +1,18 @@
+[project]
+name = "continuous-audit-lab"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["duckdb", "pandas", "numpy", "scikit-learn", "streamlit", "requests"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+notebook = ["matplotlib", "nbformat", "nbconvert", "ipykernel"]
+
+[tool.setuptools.packages.find]
+include = ["continuous_audit_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
